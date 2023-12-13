@@ -5,23 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="/img/logo-gf.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Green Fiber</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/3b4cbac4e0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="flex justify-around items-center bg-gray-200 py-5 text-md">
-        <a href="/">HOME</a>
-        <a href="/">PLANOS</a>
-        <a href="/">SOBRE</a>
-        <a href="/">SERVIÇOS</a>
-        <a href="/">INDIQUE UM AMIGO</a>
-        <a href="/">CLUBE DE VANTAGENS</a>
-        <a href="/">TRABALHE CONOSCO</a>
-        <a href="/" class="p-4 bg-white rounded-lg text-green-700 font-bold"><i class="pr-2 fa-solid fa-user"></i> ÁREA DO ASSINANTE</a>
-        <a href="/" class="p-4 bg-green-700 rounded-lg text-white font-bold -ml-20">ASSINE JÁ</a>       
+    <div class="bg-gray-200 z-50">
+    <nav class="z-50 flex justify-between items-center w-[92%] bg-gray-200 py-1 text-sm font-[Inter] mx-auto">
+        <div class="z-50 text-center bg-gray-200" href="/">
+            <img class="w-10" src="/img/logo-gf.png" alt="">
+        </div>
+        <div class="nav-links transition-all duration-500 md:static absolute items-center md:bg-gray-200 md:min-h-fit min-h-[30vh] -left-[100%] top-[13%] md:w-auto w-full flex md:items-center">
+            <ul class="flex px-5 py-5 md:items-center md:gap-[2vw] gap-6 md:flex-row flex-col bg-gray-200">
+                <li><a class="hover:text-gray-400" href="/">SOBRE</a></li>
+                <li><a class="hover:text-gray-400" href="/">PLANOS</a></li>
+                <li><a class="hover:text-gray-400" href="/">SERVIÇOS</a></li>
+                <li><a class="hover:text-gray-400" href="/">INDIQUE UM AMIGO</a></li>
+                <li><a class="hover:text-gray-400" href="/">CLUBE DE VANTAGENS</a></li>
+                <li><a class="hover:text-gray-400" href="/">TRABALHE CONOSCO</a></li>
+                <li><a href="https://central.greenfiber.net.br/central/login.hhvm" class="hover:bg-gray-300 md:bg-white md:p-3 md:my-2 rounded-lg text-green-700 font-bold text-center"><i class="pr-2 fa-solid fa-user"></i> ÁREA DO ASSINANTE</a></li>
+            </ul>
+        </div>
+        <div class="flex gap-[3vw] items-center bg-gray-200">
+            <a href="https://wa.me/5521998629274" class="z-50 hover:bg-green-500 p-3 my-2 bg-green-700 rounded-lg text-white text-center font-bold">ASSINE JÁ</a>
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
     </nav>
+    </div>
+    <div>
+        <img id="bannerDesktop" class="hidden md:block"src="img/banner_prov.png" alt="">
+        <img id="bannersMobile" class="md:hidden"src="img/bannerMobile_prov.png" alt="">
+    </div>
+    <div>
+        <div class="justify-between items-center w-[92%] mx-auto my-10 hidden md:flex" id="bannersDesktop">
+            <a href=""><img class="w-72" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-72" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-72" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-72" src="img/banner1080_prov.png" alt=""></a>
+        </div>
+        <div class="grid grid-cols-2 gap-2 items-center w-[92%] mx-auto my-10 md:hidden" id="bannersMobile">
+            <a href=""><img class="w-auto" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-auto" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-auto" src="img/banner1080_prov.png" alt=""></a>
+            <a href=""><img class="w-auto" src="img/banner1080_prov.png" alt=""></a>
+        </div>
+        <div class="flex items-center w-full justify-center pb-10">
+            <button href="/" class="hover:bg-green-500 px-5 py-4 my-2 bg-green-700 rounded-lg text-white text-center font-bold">TESTE DE VELOCIDADE</button>
+        </div>
+        <footer class="bg-gray-300 py-6 flex flex-col md:flex-row items-center justify-around gap-3">
+            <p class="text-xs md:text-lg">Todos os direitos reservados © Green Fiber 2023</p>
+            <a class="text-xs md:text-lg text-green-900 underline hover:text-green-700" href="https://www.greenfiber.net.br/privpol.html">Política de Privacidade</a>
+        </footer>
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/5521998629274" style="position:fixed;width:45px;height:45px;bottom:20px;right:10px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+    z-index:1000;" target="_blank">
+    <i style="margin-top:0px" class="fa fa-whatsapp"></i>
+    </a>
     <script src="scripts.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </body>
 </html>
