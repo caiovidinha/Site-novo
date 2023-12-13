@@ -40,15 +40,34 @@
             <p id="pEmp" class="text-lg text-black hidden">Selecione a melhor opção para a sua empresa!</p>
         </div>
         <div class="flex flex-col gap-8 p-10 md:flex-row ">
-            <div class="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8 bg-gray-200 border-2 border-gray-300">
+            <div class="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8 bg-gray-200 border-2 border-gray-300 static">
                 <h2 class="mb-5 text-xl font-medium text-center">
                     NAVEGAÇÃO AVANÇADA
                 </h2>
                 <h1 class="text-5xl text-center font-bold text-green-800 -tracking-[.15em]">500MEGA</h1>
-                <h2 class="mb-5 text-4xl font-medium text-center">
+                <h2 id="price500" class="mb-5 text-4xl font-medium text-center">
                     R$ 99,90
                 </h2>
+                <div class="relative flex flex-wrap items-center justify-between w-[70%] mx-auto bg-white p-2 rounded-xl border-2 border-gray-300">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-green-800 p-3 flex items-center justify-center rounded-full"><i class=" fa-solid fa-wifi text-xl text-center font-black text-white"></i></div>
+                    <h2 class="text-xl text-center font-black text-green-800 w-full">SUPER WI-FI</h2>
+                    <h2 class="text-xl w-full text-center font-black text-green-800 w-[50%]">GRÁTIS</h2>
+                </div>
+                <h3 class="text-[11px] w-full text-center pt-4">SEM FIDELIDADE | SEM TAXA DE INSTALAÇÃO</h3>
+                <h3 class="text-sm w-full text-center font-black text-green-800 pt-4">Deseja assinar a GreenFiber TV?</h3>
+                <div class="flex items-center">
+                <select class="w-[90%]" name="hubConteudo" id="hub">
+                    <option value="" selected>Não tenho interesse...</option>
+                    <option value="" selected>GreenFiber TV Light</option>
+                    <option value="" selected>GreenFiber TV Plus</option>
+                    <option value="" selected>GreenFiber TV Light + HBOMax</option>
+                    <option value="" selected>GreenFiber TV Plus + HBOMax</option>
+                </select>
+                <ion-icon class="text-2xl" name="information-circle-outline"></ion-icon>
             </div>
+                <a href="https://wa.me/5521998629274" target="_blank"  class="z-50 hover:bg-green-500 p-3 my-2 bg-green-700 rounded-lg text-white text-center font-bold mt-8">ASSINE JÁ</a>
+            </div>
+            
 
         </div>
     </div>
