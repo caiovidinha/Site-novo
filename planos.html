@@ -31,22 +31,23 @@
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
     </nav>
-    </div>
     
-    <div class="flex flex-col items-center bg-gray-100 p-4">
+    </div>
+    <dialog class="h-[500px] md:h-[1000px] rounded-lg shadow-lg"> <button id="close" class="absolute right-3 top-3 md:right-6 md:top-6 outline-0 w-8 h-8 rounded-xl bg-white hover:bg-gray-200"><span class="font-bold text-green-800">X</span></button> <img class="h-full w-full" src="/img/conteudo.png" alt=""></dialog>
+    <div class="flex flex-col items-center bg-gray-50 p-4">
         <div class="mb-2 mt-12 text-center ">
             <h1 class="mb-4 text-5xl font-black text-gray-900">ESCOLHA UM PLANO</h1>
             <p id="pInd" class="text-lg text-black">Selecione a melhor opção para você e sua família!</p>
             <p id="pEmp" class="text-lg text-black hidden">Selecione a melhor opção para a sua empresa!</p>
         </div>
         <div class="flex flex-col gap-8 p-10 md:flex-row ">
-            <div class="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8 bg-gray-200 border-2 border-gray-300 static">
+            <div class="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8 bg-gray-100 border-2 border-gray-300 static">
                 <h2 class="mb-5 text-xl font-medium text-center">
                     NAVEGAÇÃO AVANÇADA
                 </h2>
                 <h1 class="text-5xl text-center font-bold text-green-800 -tracking-[.15em]">500MEGA</h1>
                 <h2 id="price500" class="mb-5 text-4xl font-medium text-center">
-                    R$ 99,90
+                    R$ 99,99
                 </h2>
                 <div class="relative flex flex-wrap items-center justify-between w-[70%] mx-auto bg-white p-2 rounded-xl border-2 border-gray-300">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-green-800 p-3 flex items-center justify-center rounded-full"><i class=" fa-solid fa-wifi text-xl text-center font-black text-white"></i></div>
@@ -54,23 +55,62 @@
                     <h2 class="text-xl w-full text-center font-black text-green-800 w-[50%]">GRÁTIS</h2>
                 </div>
                 <h3 class="text-[11px] w-full text-center pt-4">SEM FIDELIDADE | SEM TAXA DE INSTALAÇÃO</h3>
-                <h3 class="text-sm w-full text-center font-black text-green-800 pt-4 items-center tracking-[.01em]">Deseja assinar a GreenFiber TV? <a class="bg-green-700 text-white px-1 py-0 rounded-full text-xs" href="">?</a></h3>
+                <h3 class="text-sm w-full text-center font-black text-green-800 pt-4 items-center tracking-[.01em]">Deseja assinar a GreenFiber TV? <a id="modalBtn" class="bg-green-700 text-white px-1 py-0 rounded-full text-xs cursor-pointer">?</a></h3>
+                
                 <div class="flex items-center w-[252px] pt-2">
-                    <div class="select-menu">
-                        <div class="select-btn w-[252px] bg-white flex justify-between items-center p-3 rounded-md shadow-md cursor-pointer">
-                            <span class="btn-text">Escolha uma opção</span>
-                            <i class="arrow fa-solid fa-chevron-down"></i>
+                    <div class="select-menu500">
+                        <div class="select-btn500 w-[252px] bg-white flex justify-between items-center p-3 rounded-md shadow-md cursor-pointer">
+                            <span class="btn-text500">Escolha uma opção</span>
+                            <i class="arrow500 fa-solid fa-chevron-down transition-all duration-300"></i>
                         </div>
-                        <ul class="options relative p-3 text-sm mt-[10px] rounded-md bg-white shadow-md">
-                            <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light</span></li>
-                            <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus</span></li>
-                            <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light + HBOMax</span></li>
-                            <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus + HBOMax</span></li>
-                            <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Não tenho interesse</span></li>
+                        <ul class="hidden options500 relative p-3 text-xs mt-[10px] rounded-md bg-white shadow-md">
+                            <li class="option500 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light (+R$14,90)</span></li>
+                            <li class="option500 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus (+R$21,90)</span></li>
+                            <li class="option500 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light + HBOMax (+R$44,90)</span></li>
+                            <li class="option500 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus + HBOMax (+R$50,90)</span></li>
+                            <li class="option500 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Não tenho interesse</span></li>
                         </ul>
                     </div>
             </div>
-                <a href="https://wa.me/5521998629274" target="_blank"  class="z-50 hover:bg-green-500 p-3 my-2 bg-green-700 rounded-lg text-white text-center font-bold mt-8">ASSINE JÁ</a>
+                <a id="assinar500" 
+                href="https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20500%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!" 
+                target="_blank"  class="z-50 hover:bg-green-500 p-3 my-2 bg-green-700 rounded-lg text-white text-center font-bold mt-8">ASSINE JÁ</a>
+            </div>
+
+             <div class="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8 bg-gray-100 border-2 border-gray-300 static">
+                <h2 class="mb-5 text-xl font-medium text-center">
+                    NAVEGAÇÃO PREMIUM
+                </h2>
+                <h1 class="text-5xl text-center font-bold text-green-800 -tracking-[.15em]">600MEGA</h1>
+                <h2 id="price600" class="mb-5 text-4xl font-medium text-center">
+                    R$ 124,90
+                </h2>
+                <div class="relative flex flex-wrap items-center justify-between w-[70%] mx-auto bg-white p-2 rounded-xl border-2 border-gray-300">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-green-800 p-3 flex items-center justify-center rounded-full"><i class=" fa-solid fa-wifi text-xl text-center font-black text-white"></i></div>
+                    <h2 class="text-xl text-center font-black text-green-800 w-full">SUPER WI-FI</h2>
+                    <h2 class="text-xl w-full text-center font-black text-green-800 w-[50%]">GRÁTIS</h2>
+                </div>
+                <h3 class="text-[11px] w-full text-center pt-4">SEM FIDELIDADE | SEM TAXA DE INSTALAÇÃO</h3>
+                <h3 class="text-sm w-full text-center font-black text-green-800 pt-4 items-center tracking-[.01em]">Deseja assinar a GreenFiber TV? <a id="modalBtn" class="bg-green-700 text-white px-1 py-0 rounded-full text-xs cursor-pointer">?</a></h3>
+                
+                <div class="flex items-center w-[252px] pt-2">
+                    <div class="select-menu600">
+                        <div class="select-btn600 w-[252px] bg-white flex justify-between items-center p-3 rounded-md shadow-md cursor-pointer">
+                            <span class="btn-text600">Escolha uma opção</span>
+                            <i class="arrow600 fa-solid fa-chevron-down transition-all duration-300"></i>
+                        </div>
+                        <ul class="hidden options600 relative p-3 text-xs mt-[10px] rounded-md bg-white shadow-md">
+                            <li class="option600 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light (+R$10,00)</span></li>
+                            <li class="option600 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus (+R$16,00)</span></li>
+                            <li class="option600 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Light + HBOMax (+R$44,90)</span></li>
+                            <li class="option600 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">GreenFiber TV Plus + HBOMax (+R$50,90)</span></li>
+                            <li class="option600 flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Não tenho interesse</span></li>
+                        </ul>
+                    </div>
+            </div>
+                <a id="assinar600" 
+                href="https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20500%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!" 
+                target="_blank"  class="z-50 hover:bg-green-500 p-3 my-2 bg-green-700 rounded-lg text-white text-center font-bold mt-8">ASSINE JÁ</a>
             </div>
             
 
