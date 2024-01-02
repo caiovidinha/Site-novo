@@ -1,3 +1,5 @@
+
+//500
 const selectMenu500 = document.querySelector('.select-menu500'),
         selectBtn500 = selectMenu500.querySelector('.select-btn500'),
         options500 = selectMenu500.querySelectorAll('.option500'),
@@ -25,11 +27,6 @@ options500.forEach(option => {
             case 'GreenFiber TV Plus (+R$21,90)':
                 price500.innerText = `R$ ${(+99.99 + +21.90).toFixed(2).toString().replace('.',',')}`
                 assinar500.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
-                break
-
-            case 'GreenFiber TV Light + HBOMax (+R$44,90)':
-                price500.innerText = `R$ ${(+99.99 + +44.90).toFixed(2).toString().replace('.',',')}`
-                assinar500.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Light%20%20%2B%20HBO%20Max!"
                 break
 
             case 'GreenFiber TV Plus + HBOMax (+R$50,90)':
@@ -80,18 +77,13 @@ options600.forEach(option => {
                 assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
                 break
 
-            case 'GreenFiber TV Light + HBOMax (+R$44,90)':
-                price600.innerText = `R$ ${(+124.99 + +44.90).toFixed(2).toString().replace('.',',')}`
+            case 'GreenFiber TV Plus + HBOMax (+R$46,00)':
+                price600.innerText = `R$ ${(+124.99 + +46).toFixed(2).toString().replace('.',',')}`
                 assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Light%20%20%2B%20HBO%20Max!"
                 break
 
-            case 'GreenFiber TV Plus + HBOMax (+R$50,90)':
-                price600.innerText = `R$ ${(+124.99 + +50.90).toFixed(2).toString().replace('.',',')}`
-                assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
-                break
-                
             default:
-                price600.innerText = `R$ 99,90`
+                price600.innerText = `R$ 124,99`
                 assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20600%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!"
             break
         }
@@ -115,7 +107,7 @@ function onToggleMenu(e){
     navlinks.classList.toggle('-left-[100%]')
 }
 
-//modal
+//modal500
 const modalBtn = document.querySelector('#modalBtn')
 const modal = document.querySelector("dialog")
 const modalBtnClose = document.querySelector('#close')
@@ -126,4 +118,30 @@ modalBtn.onclick = function () {
 
 modalBtnClose.onclick = function () {
     modal.close()
+}
+
+//modal600
+const modalBtn600 = document.querySelector('#modalBtn600')
+const modal600 = document.querySelector(".modal600")
+const modalBtnClose600 = document.querySelector('#close600')
+
+modalBtn600.onclick = function () {
+    modal600.showModal()
+}
+
+modalBtnClose600.onclick = function () {
+    modal600.close()
+}
+
+//modal800
+const modalBtn800 = document.querySelector('#modalBtn800')
+const modal800 = document.querySelector(".modal800")
+const modalBtnClose800 = document.querySelector('#close800')
+
+modalBtn800.onclick = function () {
+    modal800.showModal()
+}
+
+modalBtnClose800.onclick = function () {
+    modal800.close()
 }
