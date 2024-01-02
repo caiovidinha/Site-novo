@@ -79,7 +79,7 @@ options600.forEach(option => {
 
             case 'GreenFiber TV Plus + HBOMax (+R$46,00)':
                 price600.innerText = `R$ ${(+124.99 + +46).toFixed(2).toString().replace('.',',')}`
-                assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Light%20%20%2B%20HBO%20Max!"
+                assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
                 break
 
             default:
@@ -89,6 +89,54 @@ options600.forEach(option => {
         }
         optionMenu600.classList.add("hidden")
         btnText600.innerText = selectedOption
+        
+    })
+    
+})
+
+
+//800
+const selectMenu800 = document.querySelector('.select-menu800'),
+        selectBtn800 = selectMenu800.querySelector('.select-btn800'),
+        options800 = selectMenu800.querySelectorAll('.option800'),
+        btnText800 = selectMenu800.querySelector('.btn-text800'),
+        optionMenu800 = selectMenu800.querySelector('.options800'),
+        arrow800 = selectMenu800.querySelector('.arrow800')
+
+const price800 = document.querySelector('#price800')
+const assinar800 = document.querySelector('#assinar800')
+
+selectBtn800.addEventListener("click", () => {
+    optionMenu800.classList.toggle("hidden")
+    arrow800.classList.toggle("rotate-180")
+})
+
+options800.forEach(option => {
+    option.addEventListener("click", () =>{
+        let selectedOption = option.querySelector('.option-txt').innerText
+        switch(selectedOption){
+            case 'GreenFiber TV Light (+R$10,00)':
+                price800.innerText = `R$ ${(+149.99 + +10.00).toFixed(2).toString().replace('.',',')}`
+                assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Light!"
+                break
+
+            case 'GreenFiber TV Plus (+R$16,00)':
+                price800.innerText = `R$ ${(+149.99 + +16.00).toFixed(2).toString().replace('.',',')}`
+                assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
+                break
+
+            case 'GreenFiber TV Plus + HBOMax (+R$46,00)':
+                price800.innerText = `R$ ${(+149.99 + +46).toFixed(2).toString().replace('.',',')}`
+                assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
+                break
+
+            default:
+                price800.innerText = `R$ 149,99`
+                assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20800%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!"
+            break
+        }
+        optionMenu800.classList.add("hidden")
+        btnText800.innerText = selectedOption
         
     })
     
@@ -135,13 +183,11 @@ modalBtnClose600.onclick = function () {
 
 //modal800
 const modalBtn800 = document.querySelector('#modalBtn800')
-const modal800 = document.querySelector(".modal800")
-const modalBtnClose800 = document.querySelector('#close800')
 
 modalBtn800.onclick = function () {
-    modal800.showModal()
+    modal600.showModal()
 }
 
 modalBtnClose800.onclick = function () {
-    modal800.close()
+    modal600.close()
 }
