@@ -185,7 +185,11 @@ const assinar500Emp = document.querySelector('#assinar500Emp')
 const assinar600Emp = document.querySelector('#assinar600Emp')
 const sobMedida = document.querySelector('#sobMedida')
 
-toggleBtn.addEventListener("click", () => {
+const urlParams = new URLSearchParams(window.location.search);
+const planType = urlParams.get('type')
+
+
+const changeType = () => {
     toggle.classList.toggle("bg-green-700")
     toggle.classList.toggle("bg-gray-600")
     toggleBtn.classList.toggle("right-1")
@@ -209,4 +213,15 @@ toggleBtn.addEventListener("click", () => {
     assinar500Emp.classList.toggle('hidden')
     assinar600Emp.classList.toggle('hidden')
     sobMedida.classList.toggle('hidden')
+}
+
+
+if(planType==="empresa") {
+    changeType()
+    planType=""
+}
+
+toggleBtn.addEventListener("click", () => {
+    changeType()
 })
+
