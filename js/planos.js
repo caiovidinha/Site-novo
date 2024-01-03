@@ -1,4 +1,3 @@
-
 //500
 const selectMenu500 = document.querySelector('.select-menu500'),
         selectBtn500 = selectMenu500.querySelector('.select-btn500'),
@@ -141,20 +140,6 @@ options800.forEach(option => {
     })
     
 })
-
-
-
-
-
-
-//navbar
-const navlinks = document.querySelector('.nav-links')
-function onToggleMenu(e){
-    e.name = e.name === 'menu' ? 'close' : 'menu'
-    navlinks.classList.toggle('left-0')
-    navlinks.classList.toggle('-left-[100%]')
-}
-
 //modal500
 const modalBtn = document.querySelector('#modalBtn')
 const modal = document.querySelector("dialog")
@@ -188,6 +173,40 @@ modalBtn800.onclick = function () {
     modal600.showModal()
 }
 
-modalBtnClose800.onclick = function () {
-    modal600.close()
-}
+
+//toggle familia -> empresa
+const toggle = document.querySelector('#toggle')
+const toggleBtn = document.querySelector('#toggleBtn')
+const toggleIcon = document.querySelector('#toggleIcon')
+const textEmpresa = document.querySelector('#pEmp')
+const textFamilia = document.querySelector('#pInd')
+const itemsIndividuais = document.querySelectorAll('.ind')
+const assinar500Emp = document.querySelector('#assinar500Emp')
+const assinar600Emp = document.querySelector('#assinar600Emp')
+const sobMedida = document.querySelector('#sobMedida')
+
+toggleBtn.addEventListener("click", () => {
+    toggle.classList.toggle("bg-green-700")
+    toggle.classList.toggle("bg-gray-600")
+    toggleBtn.classList.toggle("right-1")
+    toggleBtn.classList.toggle("left-1")
+    textEmpresa.classList.toggle('hidden')
+    textFamilia.classList.toggle('hidden')
+    if(toggle.classList.contains("bg-gray-600")){
+        toggleIcon.classList.add("fa-user-group")
+        toggleIcon.classList.remove("fa-building")
+        toggleIcon.classList.remove("text-green-700")
+    }else {
+        toggleIcon.classList.add("fa-building")
+        toggleIcon.classList.add("text-green-700")
+        toggleIcon.classList.remove("fa-user-group")
+    }
+    itemsIndividuais.forEach(item => {
+        item.classList.toggle('hidden')
+    })
+    assinar500.classList.toggle('hidden')
+    assinar600.classList.toggle('hidden')
+    assinar500Emp.classList.toggle('hidden')
+    assinar600Emp.classList.toggle('hidden')
+    sobMedida.classList.toggle('hidden')
+})
