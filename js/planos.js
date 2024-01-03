@@ -215,10 +215,10 @@ const changeType = () => {
     sobMedida.classList.toggle('hidden')
 }
 
-
-if(planType==="empresa") {
-    changeType()
-    planType=""
+const checkEmpresa = () => {
+    if(planType==="empresa") {
+        changeType()
+    }
 }
 
 toggleBtn.addEventListener("click", () => {
