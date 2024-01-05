@@ -192,8 +192,7 @@ const planType = urlParams.get('type')
 const changeType = () => {
     toggle.classList.toggle("bg-green-700")
     toggle.classList.toggle("bg-gray-600")
-    toggleBtn.classList.toggle("right-1")
-    toggleBtn.classList.toggle("left-1")
+    toggleBtn.classList.toggle("translate-x-8")
     textEmpresa.classList.toggle('hidden')
     textFamilia.classList.toggle('hidden')
     if(toggle.classList.contains("bg-gray-600")){
