@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="/img/logo-gf.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Trabalhe Conosco - Green Fiber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Consulta CEP - Green Fiber</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/3b4cbac4e0.js" crossorigin="anonymous"></script>
 </head>
@@ -35,7 +36,7 @@
     <div>
     <h2 
     class="w-[92%] text-center md:w-[70%] mx-auto font-bold text-3xl my-5 text-gray-800"
-    >TRABALHE CONOSCO
+    >CONSULTA DISPONIBILIDADE
     <hr 
     class="w-16 my-2 border-[1px] rounded-lg border-gray-600 border-solid mx-auto"
     ></h2>
@@ -44,28 +45,33 @@
 <div class="bg-white rounded-lg shadow-md p-5 w-full max-w-[500px]">
     <h2 class="font-bold text-2xl mb-5 text-center mx-auto">Preencha o formulário e faça parte da equipe Green Fiber!</h2>
     <form action="">
-        <div class="mb-3">
-            <label for="nome" class="block mb-1">Nome Completo</label>
-            <input type="text" id="nome" name="nome" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
-        </div>
-        <div class="mb-3">
-            <label for="telefone" class="block mb-1">DDD + Telefone</label>
-            <input type="text" id="telefone" name="telefone" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="block mb-1">Email</label>
-            <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
-        </div>
-        <div class="mb-3">
-            <label for="cargo" class="block mb-1">Cargo desejado</label>
-            <input type="text" id="cargo" name="cargo" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
-        </div>
-        <div class="mb-3">
-            <label for="curriculo" class="block mb-1">Anexe ou arraste o PDF do currículo</label>
-            <input type="file" id="curriculo" name="curriculo" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
-        </div>
+           
+            <div class="mb-3">
+               <label for="cep" class="block mb-1">CEP</label>
+               <input type="text" maxlength="8" id="cep" name="cep" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" onkeypress="return onlyNumber(evt)">
+            </div>
+            <div class="mb-3">
+               <label for="endereco" class="block mb-1">Endereço</label>
+               <input type="text" id="endereco" name="endereco" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" disabled>
+            </div>
+            <div class="mb-3">
+               <label for="numero" class="block mb-1">Número</label>
+               <input type="text" id="numero" name="numero" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" disabled>
+            </div>
+            <div class="mb-3">
+               <label for="bairro" class="block mb-1">Bairro</label>
+               <input type="text" id="bairro" name="bairro" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" disabled>
+            </div>
+            <div class="mb-3">
+               <label for="estado" class="block mb-1">Estado</label>
+               <input type="text" id="estado" name="estado" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" disabled>
+            </div>
+            <div class="mb-3">
+               <label for="cidade" class="block mb-1">Cidade</label>
+               <input type="text" id="cidade" name="cidade" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500" disabled>
         <button type="submit" class="bg-green-500 hover:bg-green-700 p-3 rounded-lg text-white w-full">Enviar</button>
     </form>
+</div>
 </div>
 </div>
     <div class="bg-gray-300">
@@ -84,6 +90,9 @@
     z-index:1000;" target="_blank">
     <i style="margin-top:0px" class="fa fa-whatsapp"></i>
     </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="js/cep.js"></script>
     <script src="js/navbar.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
