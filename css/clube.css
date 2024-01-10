@@ -1,0 +1,9 @@
+.fundo {
+    background-image: url('../img/bg_vantagem.png');
+}
+
+@media (max-width: 500px) {
+    .fundo {
+        background-image: url('../img/bg_vantagem_mob.png');
+    }
+}

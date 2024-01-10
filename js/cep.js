@@ -20,16 +20,46 @@ id('cep').onkeyup = function(){
 }
 
 
-const submit = document.querySelector('button')
+const submit = document.querySelector('.consulta')
+const numeroCampo = document.querySelector('#numero')
+
+numeroCampo.addEventListener('focus',()=>{
+  const numeroCampo = document.querySelector('#numero')
+  const errorNum = document.querySelector('#errorNum')
+  numeroCampo.classList.remove('border-red-700')
+  errorNum.classList.add('hidden')
+})
 
 submit.addEventListener('click', (e)=>{
-  const cep = document.querySelector('#cep').value
-  const numero = document.querySelector('#numero').value
+  const cepCampo = document.querySelector('#cep')
+  const cep = cepCampo.value
+  const numeroCampo = document.querySelector('#numero')
+  const numero = numeroCampo.value
+  const errorNum = document.querySelector('#errorNum')
+  const errorCEP = document.querySelector('#errorCEP')
+  const modalOK = document.querySelector('.modalOK')
   e.preventDefault()
-  console.log(cep + ',' + numero)
-  if(cep.length === 8 && numero.length !== 0) console.log('sim')
-  else console.log('nao')
+  if(cep.length === 8 && numero.length !== 0) {
+    modalOK.showModal()
+  }
+  else {
+    if (numero.length == 0) {
+        numeroCampo.classList.add('border-red-700')
+        errorNum.classList.remove('hidden')
+      }
+    if (cep.length < 8) {
+        cepCampo.classList.add('border-red-700')
+        errorCEP.classList.remove('hidden')
+      }
+    }
 })
+
+const modal = document.querySelector("dialog")
+const modalBtnClose = document.querySelector('#close')
+
+modalBtnClose.onclick = function () {
+    modal.close()
+}
 
 
 
