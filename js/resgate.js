@@ -28,6 +28,7 @@ btnResg.addEventListener('click',() => {
     const conteudo = document.querySelector('.container').innerHTML 
     
     let estilo = "<style>"
+    estilo += 'body {font-family:Inter, sans-serif;}'
     estilo += ".cupom {width: 600px;height: 300px;position: relative;display: flex;flex-direction: row;background-repeat: no-repeat;background-size: contain;}"
     estilo += ".direita{background-color: rgb(255 251 235);border-top-left-radius: 0.75rem;border-bottom-left-radius: 0.75rem;width: 400px;position: relative;display: flex;flex-direction: column;justify-content: center;align-items: center;}"
     estilo += ".logo{width: 90px;}"
@@ -42,13 +43,14 @@ btnResg.addEventListener('click',() => {
 
     win.document.write('<html><head>')
     win.document.write('<title>Cupom de desconto</title>')
+    win.document.write('<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">')
     win.document.write(estilo)
     win.document.write('</head>')
     win.document.write('<body>')
     win.document.write(conteudo)
     win.document.write('</body></html>')
 
-    win.print()
+    setTimeout(() => {win.print()},1000)
 
 
     let first = Math.random()       // Gera um valor randômico
