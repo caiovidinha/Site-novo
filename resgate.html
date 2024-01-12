@@ -47,6 +47,40 @@
     </nav>
     
     </div>
+    <dialog 
+    class="p-3 modalCPF min-h-[170px]  max-w-[500px] min-w-[300px] md:min-w-[500px]  md:min-h-[250px] rounded-lg shadow-lg bg-white"
+    > 
+    <div class="flex justify-center items-center flex-col">
+        <img src="img/notcheck.png" class="w-20 py-2" alt="">
+        <h1 class="font-bold text-gray-700 text-3xl">Opa!</h1>
+        <h2 class="text-gray-700 text-sm md:text-lg mt-3 text-center"
+        >Parece que o login e CPF inseridos não coincidem ou você cometeu algum erro de digitação! Por favor, tente novamente!
+    </h2>
+
+    </div>
+        <button 
+        id="closeCPF" 
+        class="absolute right-3 top-3 md:right-6 md:top-6 outline-0 w-8 h-8 rounded-xl bg-white hover:bg-gray-200"
+        ><span class="font-bold text-green-800">X</span></button>
+
+    </dialog>
+    <dialog 
+    class="p-3 modalLogin min-h-[170px]  max-w-[500px] min-w-[300px] md:min-w-[500px]  md:min-h-[250px] rounded-lg shadow-lg bg-white"
+    > 
+    <div class="flex justify-center items-center flex-col">
+        <img src="img/notcheck.png" class="w-20 py-2" alt="">
+        <h1 class="font-bold text-gray-700 text-3xl">Opa!</h1>
+        <h2 class="text-gray-700 text-sm md:text-lg mt-3 text-center"
+        >Parece que o seu Login não existe ou foi digitado incorretamente! Tente novamente, por favor!
+    </h2>
+    
+    </div>
+        <button 
+        id="closeLogin" 
+        class="absolute right-3 top-3 md:right-6 md:top-6 outline-0 w-8 h-8 rounded-xl bg-white hover:bg-gray-200"
+        ><span class="font-bold text-green-800">X</span></button>
+
+    </dialog>
     <h2 
     class="w-[92%] text-center md:w-[70%] mx-auto font-bold text-3xl my-5 text-gray-800"
     >RESGATE SEUS BENEFÍCIOS
@@ -57,15 +91,15 @@
     <form action="">
         <div class="mb-3">
             <label for="cpf" class="block mb-1">CPF</label>
-            <input type="text" id="cpf" name="cpf" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
+            <input type="text" id="cpf" name="cpf" class="cpf w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
         </div>
         <div class="mb-3">
             <label for="login" class="block mb-1">Login (Área do assinante)</label>
-            <input type="text" id="login" name="login" class="w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
+            <input type="text" id="login" name="login" class="login w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
         </div>
 
 
-        <div class="select-menu mb-5">
+        <div class="select-menu mb-5 relative">
             <p class="block mb-1">Qual benefício deseja resgatar?</p>
             <div class="bg-white select-btn w-full p-2 border border-gray-300 rounded-lg focus:border-green-500 cursor-pointer flex items-center justify-between">
                 <span class="btn-text">Escolha uma opção</span>
@@ -86,9 +120,10 @@
                 <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Donna Toscana (XX% OFF)</span></li>
                 <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Donna Zaya (XX% OFF)</span></li>
             </ul>
+            <p id="errorOptions" class="hidden text-red-600 absolute text-xs mt-1 right-0">Escolha uma opção!</p>
         </div>
     </form>
-    <button id="btnResg" class="bg-green-500 hover:bg-green-700 p-3 rounded-lg text-white w-full">RESGATAR</button>
+    <button id="btnResg" class="bg-green-500 hover:bg-green-700 p-3 mt-3 rounded-lg text-white w-full">RESGATAR</button>
 </div>
            
 
@@ -113,6 +148,8 @@
     </a>
     <script src="js/navbar.js"></script>
     <script src="js/resgate.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/html2canvas.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 

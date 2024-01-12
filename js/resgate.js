@@ -4,9 +4,8 @@ const selectMenu = document.querySelector('.select-menu'),
         btnText = selectMenu.querySelector('.btn-text'),
         optionMenu = selectMenu.querySelector('.options'),
         arrow = selectMenu.querySelector('.arrow')
+const errorOptions = document.querySelector('#errorOptions')
 
-const price = document.querySelector('#price')
-const assinar = document.querySelector('#assinar')
 
 selectBtn.addEventListener("click", () => {
     optionMenu.classList.toggle("hidden")
@@ -16,7 +15,10 @@ selectBtn.addEventListener("click", () => {
 options.forEach(option => {
     option.addEventListener("click", () =>{
         let selectedOption = option.querySelector('.option-txt').innerText
-
+        errorOptions.classList.add('hidden')
+        selectBtn.classList.add('bg-white')
+        selectBtn.classList.remove('bg-red-500')
+        optionMenu.classList.add("hidden")
         btnText.innerText = selectedOption
         
     })
@@ -24,33 +26,50 @@ options.forEach(option => {
 })
 
 const btnResg = document.querySelector('#btnResg')
-btnResg.addEventListener('click',() => {
-    const conteudo = document.querySelector('.container').innerHTML 
+const modalLogin = document.querySelector('.modalLogin')
+const btnCloseLogin = document.querySelector('#closeLogin')
+btnCloseLogin.addEventListener('click', () => {
+    modalLogin.close()
+})
+
+const modalCPF = document.querySelector('.modalCPF')
+const btnCloseCPF = document.querySelector('#closeCPF')
+btnCloseCPF.addEventListener('click', () => {
+    modalCPF.close()
+})
+
+btnResg.addEventListener('click',async () => {
+    const login = document.querySelector('.login').value
+    const btnText = selectMenu.querySelector('.btn-text').innerText
+    const cpf = document.querySelector('.cpf').value.replace('.','').replace('-','')
+    const pessoa = await getPessoa(login,cpf)
+    const modalLogin = document.querySelector('.modalLogin')
+    const modalCPF = document.querySelector('.modalCPF')
     
-    let estilo = "<style>"
-    estilo += 'body {font-family:Inter, sans-serif;}'
-    estilo += ".cupom {width: 600px;height: 300px;position: relative;display: flex;flex-direction: row;background-repeat: no-repeat;background-size: contain;}"
-    estilo += ".direita{background-color: rgb(255 251 235);border-top-left-radius: 0.75rem;border-bottom-left-radius: 0.75rem;width: 400px;position: relative;display: flex;flex-direction: column;justify-content: center;align-items: center;}"
-    estilo += ".logo{width: 90px;}"
-    estilo += ".codigo{font-size: 3rem;line-height: 1;text-align: center;font-weight:900;}"
-    estilo += ".valido{text-align: center;padding-left: 1.25rem;padding-right: 1.25rem;}"
-    estilo += ".validade{margin-top: 1rem;font-size: 10pt;color: gray;}"
-    estilo += ".esquerda{display: flex;flex-direction: column;align-items: center;justify-content: center;border-top-right-radius: 0.75rem;border-bottom-right-radius: 0.75rem;border-left-width: 2px;	border-style: dotted;border-color: black;width: 200px;background-color: darkgreen;}"
-    estilo += ".desconto{font-size:50px;padding-left: 1.5rem;padding-right: 1.5rem;line-height: 1; color: white; font-weight: 900;text-align: center;}"
-    estilo += "</style>"
+    if (pessoa == 'Erro de Login') {
+        modalLogin.showModal()
+        return
+    }
+    if (pessoa == 'Erro de CPF') {
+        modalCPF.showModal()
+        return
+    }
+    if(btnText == 'Escolha uma opção') {
+        errorOptions.classList.remove('hidden')
+        selectBtn.classList.add('bg-red-500')
+        selectBtn.classList.remove('bg-white')
+        return
+    }
+    pessoa.cpf = cpf
+    console.log(pessoa)
+    console.log(btnText)
 
-    const win = window.open('', '', 'height=700, width=700')
+    const img = document.querySelector('.logoCupom')
+    const codigo = document.querySelector('.codigo')
+    const descricao = document.querySelector('.valido')
+    const validade = document.querySelector('.validade')
+    const desconto = document.querySelector('.desconto')
 
-    win.document.write('<html><head>')
-    win.document.write('<title>Cupom de desconto</title>')
-    win.document.write('<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">')
-    win.document.write(estilo)
-    win.document.write('</head>')
-    win.document.write('<body>')
-    win.document.write(conteudo)
-    win.document.write('</body></html>')
-
-    setTimeout(() => {win.print()},1000)
 
 
     let first = Math.random()       // Gera um valor randômico
@@ -61,5 +80,5 @@ btnResg.addEventListener('click',() => {
     let last = Math.floor((Math.random() * (9999 - 1000)) + 1000); // Gera um valor entre 999 e 10000
 
 
-    console.log( `${first}-${last}` )
+    console.log( `${first}${last}` )
 })

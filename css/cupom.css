@@ -1,8 +1,8 @@
 .cupom {width: 600px;height: 300px;position: relative;display: flex;flex-direction: row;background-repeat: no-repeat;background-size: contain;}
 .direita{background-color: rgb(255 251 235);border-top-left-radius: 0.75rem;border-bottom-left-radius: 0.75rem;width: 400px;position: relative;display: flex;flex-direction: column;justify-content: center;align-items: center;}
-.logo{width: 90px;}
+.logoCupom{width: 90px;}
 .codigo{font-size: 3rem;line-height: 1;text-align: center;font-weight:900;}
 .valido{text-align: center;padding-left: 1.25rem;padding-right: 1.25rem;}
-.validade{margin-top: 1rem;font-size: 10pt;color: gray;}
+.validade{font-size: 10pt;color: gray;}
 .esquerda{display: flex;flex-direction: column;align-items: center;justify-content: center;border-top-right-radius: 0.75rem;border-bottom-right-radius: 0.75rem;border-left-width: 2px;	border-style: dotted;border-color: black;width: 200px;background-color: darkgreen;}
 .desconto{font-size:50px;padding-left: 1.5rem;padding-right: 1.5rem;line-height: 1; color: white; font-weight: 900;text-align: center;}
