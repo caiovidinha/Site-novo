@@ -30,7 +30,7 @@ numeroCampo.addEventListener('focus',()=>{
   errorNum.classList.add('hidden')
 })
 
-submit.addEventListener('click', (e)=>{
+submit.addEventListener('click', async (e)=>{
   const cepCampo = document.querySelector('#cep')
   const cep = cepCampo.value
   const numeroCampo = document.querySelector('#numero')
@@ -38,9 +38,15 @@ submit.addEventListener('click', (e)=>{
   const errorNum = document.querySelector('#errorNum')
   const errorCEP = document.querySelector('#errorCEP')
   const modalOK = document.querySelector('.modalOK')
+  const modalNOT = document.querySelector('.modalNOT')
   e.preventDefault()
   if(cep.length === 8 && numero.length !== 0) {
-    modalOK.showModal()
+    const clientList = await getClientes()
+    if(checkCEP(clientList,cep,numero)) {
+      modalOK.showModal()
+    }else{
+      modalNOT.showModal()
+    }
   }
   else {
     if (numero.length == 0) {
@@ -54,11 +60,16 @@ submit.addEventListener('click', (e)=>{
     }
 })
 
-const modal = document.querySelector("dialog")
+const modalOK = document.querySelector('.modalOK')
+const modalNOT = document.querySelector('.modalNOT')
 const modalBtnClose = document.querySelector('#close')
+const modalBtnCloseNOT = document.querySelector('#closeNOT')
 
 modalBtnClose.onclick = function () {
-    modal.close()
+  modalOK.close()
+}
+modalBtnCloseNOT.onclick = function () {
+  modalNOT.close()
 }
 
 

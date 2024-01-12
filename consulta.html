@@ -13,11 +13,12 @@
     <script src="https://kit.fontawesome.com/3b4cbac4e0.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-[Inter]">
+    <!-- Modal OK -->
     <dialog 
     class="p-3 modalOK min-h-[200px]  max-w-[500px] min-w-[300px] md:min-w-[500px]  md:min-h-[300px] rounded-lg shadow-lg bg-white"
     > 
     <div class="flex justify-center items-center flex-col">
-        <img src="img/check.png" class="w-32 " alt="">
+        <img src="img/check.png" class="w-20 py-2" alt="">
         <h1 class="font-bold text-gray-700 text-3xl">Ótima notícia!</h1>
         <h2 class="text-gray-700 text-sm md:text-lg mt-3 text-center"
         >A Green Fiber tem cobertura no seu endereço! Clique no botão abaixo e selecione o plano perfeito!
@@ -30,6 +31,29 @@
     </div>
         <button 
         id="close" 
+        class="absolute right-3 top-3 md:right-6 md:top-6 outline-0 w-8 h-8 rounded-xl bg-white hover:bg-gray-200"
+        ><span class="font-bold text-green-800">X</span></button>
+
+    </dialog>
+
+    <!-- Modal NOT -->
+    <dialog 
+    class="p-3 modalNOT min-h-[200px]  max-w-[500px] min-w-[300px] md:min-w-[500px]  md:min-h-[300px] rounded-lg shadow-lg bg-white"
+    > 
+    <div class="flex justify-center items-center flex-col">
+        <img src="img/notcheck.png" class="w-20 py-2" alt="">
+        <h1 class="font-bold text-gray-700 text-3xl">Poxa!</h1>
+        <h2 class="text-gray-700 text-sm md:text-lg mt-3 text-center"
+        >Infelizmente a Green Fiber ainda não atende seu endereço!
+    </h2>
+        <a
+        href="https://wa.me/5521998629274" 
+        class="z-50 hover:bg-green-500 p-3 mb-3 bg-green-700 rounded-lg text-white text-center font-bold mt-8"
+        >ENTRE NA LISTA DE ESPERA</a>
+
+    </div>
+        <button 
+        id="closeNOT" 
         class="absolute right-3 top-3 md:right-6 md:top-6 outline-0 w-8 h-8 rounded-xl bg-white hover:bg-gray-200"
         ><span class="font-bold text-green-800">X</span></button>
 
@@ -120,7 +144,8 @@
     </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="js/cep.js"></script>
+    <script src="js/cep.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/navbar.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
