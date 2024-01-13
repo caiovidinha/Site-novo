@@ -13,3 +13,9 @@ btn.addEventListener('click', () => {
     )
 }
 )
+const img = document.querySelector('.logoCupom')
+    const codigo = document.querySelector('.codigo')
+    const descricao = document.querySelector('.valido')
+    const validade = document.querySelector('.validade')
+    const desconto = document.querySelector('.desconto')
+    console.log(img+codigo+descricao+validade+desconto)

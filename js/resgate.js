@@ -69,8 +69,8 @@ btnResg.addEventListener('click',async () => {
     const descricao = document.querySelector('.valido')
     const validade = document.querySelector('.validade')
     const desconto = document.querySelector('.desconto')
-
-
+    const nomeCupom = document.querySelector('.nomeCupom')
+    const cpfCupom = document.querySelector('.cpfCupom')
 
     let first = Math.random()       // Gera um valor randômico
                 .toString(36)   // Utiliza a Base36
@@ -78,7 +78,13 @@ btnResg.addEventListener('click',async () => {
                 .toUpperCase(); // Converte para maiúscula 
                 
     let last = Math.floor((Math.random() * (9999 - 1000)) + 1000); // Gera um valor entre 999 e 10000
+    //TODO
+    // img.src = adicionar switch
+    // codigo.innerText = validar se ja existe
+    // descricao.innerText = adicionar switch
+    // validade.innerText = let data + 30 dias
+    // desconto.innerText = adicionar switch
+    // nomeCupom.innerText = pessoa.nome
+    // cpfCupom.innerText = pessoa.cpf
 
-
-    console.log( `${first}${last}` )
 })
