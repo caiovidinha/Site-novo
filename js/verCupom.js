@@ -49,7 +49,6 @@ btnVer.addEventListener('click', async () => {
             criacao.innerText = dataDeCriacao
             validade.innerText = dataDeValidade
             cupomInfo.classList.remove("hidden")
-            codigo.value = ''
             return
         }
     }
@@ -63,4 +62,24 @@ const modalCupom = document.querySelector('.modalCupom')
 const closeCupom = document.querySelector('#closeCupom')
 closeCupom.addEventListener('click', () => {
     modalCupom.close()
+})
+
+const useBtn = document.querySelector('#btnUse')
+useBtn.addEventListener('click', () => {
+    const cupomInfo = document.querySelector(".cupomInfo")
+    cupomInfo.classList.add("hidden")
+    const codigo = document.querySelector(".codigo")
+    const post = {
+        codigo: codigo.value
+      }
+      
+      fetch('https://hooks.zapier.com/hooks/catch/17556644/3gy2wer/', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(post),
+      })
+      codigo.value = ''
 })
