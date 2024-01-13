@@ -12,8 +12,46 @@
     <script src="https://kit.fontawesome.com/3b4cbac4e0.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-[Inter] flex items-center justify-center h-screen">
-    <button class="p-3 w-32 bg-gray-200 rounded-md text-black hover:text-white font-bold hover:bg-gray-500">RODAR API</button>
-<script src="js/api.js"></script>
+    <div class="w-[92%] md:w-[30%] mx-auto p-10 bg-gray-200 rounded-xl my-10">
+        <form action="">
+            <div class="mb-3">
+                <label for="cpf" class="block mb-1">CPF</label>
+                <input type="text" id="cpf" name="cpf" class="cpf w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
+            </div>
+            <div class="mb-3">
+                <label for="login" class="block mb-1">Login (Área do assinante)</label>
+                <input type="text" id="login" name="login" class="login w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
+            </div>
+    
+    
+            <div class="select-menu mb-5 relative">
+                <p class="block mb-1">Qual benefício deseja resgatar?</p>
+                <div class="bg-white select-btn w-full p-2 border border-gray-300 rounded-lg focus:border-green-500 cursor-pointer flex items-center justify-between">
+                    <span class="btn-text">Escolha uma opção</span>
+                    <i class="arrow fa-solid fa-chevron-down transition-all duration-300"></i>
+                </div>
+                <ul class="hidden options relative p-3 text-xs mt-[10px] rounded-md bg-white shadow-md">
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Escolha uma opção</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Bem Me Quer (5% OFF)</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">BF Tosa e Banho (10% OFF)</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">CSA Corretora de Seguros (10% OFF)</span></li>
+                    <!-- <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Bicho Papão Restaurante (XX% OFF)</span></li> -->
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Evolution Fit Studio (5% OFF)</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">CT Nação de Lutas (10% OFF)</span></li>
+                    <!-- <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">On Fire (XX% OFF)</span></li> -->
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Niterói Barbecue (5% OFF)</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Pilates Pendotiba (10% OFF)</span></li>
+                    <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Salgados Vó Regina (10% OFF)</span></li>
+                    <!-- <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Sushi da Praça (XX% OFF)</span></li> -->
+                    <!-- <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Donna Toscana (XX% OFF)</span></li> -->
+                    <!-- <li class="option flex p-2 hover:bg-gray-200 cursor-pointer rounded-md"><span class="option-txt">Donna Zaya (XX% OFF)</span></li> -->
+                </ul>
+                <p id="errorOptions" class="hidden text-red-600 absolute text-xs mt-1 right-0">Escolha uma opção!</p>
+            </div>
+        </form>
+        <button id="btnResg" class="bg-green-500 hover:bg-green-700 p-3 mt-3 rounded-lg text-white w-full">RESGATAR</button>
+    </div>
+<script src="test.js"></script>
 </body>
 </html>
 
