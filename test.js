@@ -56,72 +56,102 @@ btnResg.addEventListener('click', () => {
   criacao = dataFormatada(criacao)
   validade = dataFormatada(validade)
 
-
+  
+  
   let first = Math.random()       // Gera um valor randômico
   .toString(36)   // Utiliza a Base36
   .substr(-4)     // Captura os 4 últimos números
   .toUpperCase() // Converte para maiúscula 
   let last = Math.floor((Math.random() * (9999 - 1000)) + 1000)
   codigo = `${first}${last}`
-
-  //TODO
-
   
-  switch(btnText) {
-    case 'Bem Me Quer (5% OFF)':
-      img = 'img/logos_clube/bemequer.png'
-      descricao = 'Válido para todos os produtos, exceto os que estão em promoção.'
-      desconto = '5% OFF'
-      break
+  let SHEET_ID = '1f0RoktNyd1Rx2b6H8yludZm54XFAR7DyoDUP565mpiY'
+  let SHEET_TITLE_MOV = 'codigos'
+  let SHEET_RANGE = 'A:H'
+  let FULL_URL =
+  'https://docs.google.com/spreadsheets/d/' +
+  SHEET_ID +
+  '/gviz/tq?sheet=' +
+  SHEET_TITLE_MOV +
+  '&range=' +
+  SHEET_RANGE
+  
+  
+switch(btnText) {
+  case 'Bem Me Quer (5% OFF)':
+  img = 'img/logos_clube/bemequer.png'
+  descricao = 'Válido para todos os produtos, exceto os que estão em promoção.'
+  desconto = '5% OFF'
+  break
 
-    case 'BF Tosa e Banho (10% OFF)':
-      img = 'img/logos_clube/bf.png'
-      descricao = 'Válido para rações e remédios de segunda a sábado. Para Tosa higienica e hidratação somente terças e quartas.'
-      desconto = '10% OFF'
-      break
+  case 'BF Tosa e Banho (10% OFF)':
+  img = 'img/logos_clube/bf.png'
+  descricao = 'Válido para rações e remédios de segunda a sábado. Para Tosa higienica e hidratação somente terças e quartas.'
+  desconto = '10% OFF'
+  break
 
-    case 'CSA Corretora de Seguros (10% OFF)':
-      img = 'img/logos_clube/csa.png'
-      descricao = 'Válido para o primeiro boleto do plano de saúde. Para planos individuais e empresariais.'
-      desconto = '10% OFF'
-      break
+  case 'CSA Corretora de Seguros (10% OFF)':
+  img = 'img/logos_clube/csa.png'
+  descricao = 'Válido para o primeiro boleto do plano de saúde. Para planos individuais e empresariais.'
+  desconto = '10% OFF'
+  break
 
-    case 'Evolution Fit Studio (5% OFF)':
-      img = 'img/logos_clube/evolution.png'
-      descricao = 'Válido para Spinning, Aulas em grupo ou individuais e Personal Trainer. Aplicado na mensalidade.'
-      desconto = '5% OFF'
-      break
+  case 'Evolution Fit Studio (5% OFF)':
+  img = 'img/logos_clube/evolution.png'
+  descricao = 'Válido para Spinning, Aulas em grupo ou individuais e Personal Trainer. Aplicado na mensalidade.'
+  desconto = '5% OFF'
+  break
 
-    case 'CT Nação de Lutas (10% OFF)':
-      img = 'img/logos_clube/nacao.png'
-      descricao = 'Válido para Jiu-jitsu segunda quarta e sexta, MMA De segunda a sexta e o Box. Aplicado na mensalidade.'
-      desconto = '10% OFF'
-      break
+  case 'CT Nação de Lutas (10% OFF)':
+  img = 'img/logos_clube/nacao.png'
+  descricao = 'Válido para Jiu-jitsu segunda quarta e sexta, MMA De segunda a sexta e o Box. Aplicado na mensalidade.'
+  desconto = '10% OFF'
+  break
 
-    case 'Niterói Barbecue (5% OFF)':
-      img = 'img/logos_clube/bbq.png'
-      descricao = 'oi'
-      desconto = '10% OFF'
-      break
+  case 'Niterói Barbecue (5% OFF)':
+  img = 'img/logos_clube/bbq.png'
+  descricao = 'oi'
+  desconto = '10% OFF'
+  break
 
-    case 'Pilates Pendotiba (10% OFF)':
-      img = 'img/logos_clube/pilates.png'
-      descricao = 'Válido para pilates. Desconto aplicado na mensalidade.'
-      desconto = '10% OFF'
-      break
+  case 'Pilates Pendotiba (10% OFF)':
+  img = 'img/logos_clube/pilates.png'
+  descricao = 'Válido para pilates. Desconto aplicado na mensalidade.'
+  desconto = '10% OFF'
+  break
 
-    case 'Salgados Vó Regina (10% OFF)':
-      img = 'img/logos_clube/regina.png'
-      descricao = 'Válido para todos os pedidos.'
-      desconto = '10% OFF'
-      break
+  case 'Salgados Vó Regina (10% OFF)':
+  img = 'img/logos_clube/regina.png'
+  descricao = 'Válido para todos os pedidos.'
+  desconto = '10% OFF'
+  break
 
   }
+      
+      const post = {
+        codigo: codigo,
+        nome: nomeCupom,
+        cpf: cpfCupom,
+        criacao: criacao,
+        validade: validade,
+        parceiro: btnText.split('(')[0],
+        desconto: desconto
+        
+      }
+      
+      fetch('https://hooks.zapier.com/hooks/catch/17556644/3wvxqor/', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(post),
+      })
 
-  const win = window.open('', '', 'height=700, width=700')
-
-win.document.write(`<!DOCTYPE html>`)
-win.document.write(`<html lang="pt">`)
+      const win = window.open('', '', 'height=700, width=700')
+      
+      win.document.write(`<!DOCTYPE html>`)
+      win.document.write(`<html lang="pt">`)
 win.document.write(`<head>`)
 win.document.write(`<meta charset="UTF-8">`)
 win.document.write(`<meta name="viewport" content="width=device-width, initial-scale=1.0">`)
