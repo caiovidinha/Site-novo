@@ -47,14 +47,6 @@ btnResg.addEventListener('click', () => {
     cpf: cpf
   }
 
-  // const img = document.querySelector('.logoCupom')
-  // const codigo = document.querySelector('.codigo')
-  // const descricao = document.querySelector('.valido')
-  // const validade = document.querySelector('.validade')
-  // const desconto = document.querySelector('.desconto')
-  // const nomeCupom = document.querySelector('.nomeCupom')
-  // const cpfCupom = document.querySelector('.cpfCupom')
-
   let img,codigo,descricao,criacao,validade,desconto,nomeCupom,cpfCupom
   nomeCupom = pessoa.nome
   cpfCupom = pessoa.cpf
@@ -158,7 +150,7 @@ win.document.write(`</div>`)
 win.document.write(`<p class="text-gray-600 text-[7pt] my-2 md:my-1 text-center w-[90%] md:w-[70%]">A Green Fiber se isenta de qualquer problema decorrente dos serviços oferecidos pelos parceiros.</p>`)
 win.document.write(`</div>`)
 win.document.write(`<div class="esquerda rounded-r-xl bg-green-900 flex items-center w-[30%] h-72">`)
-win.document.write(`<h1 class="desconto font-black text-5xl text-white text-center">10% OFF</h1>`)
+win.document.write(`<h1 class="desconto font-black text-5xl text-white text-center">${desconto}</h1>`)
 win.document.write(`</div>`)
 win.document.write(`</div>`)
 win.document.write(`<button class="btnDown w-48 bg-gray-200 hover:bg-gray-400 rounded-md font-semibold text-md p-3 mt-10">Baixar seu cupom!</button>`)
@@ -168,12 +160,5 @@ win.document.write(`<script src="js/pdf.js"></script>`)
 win.document.write(`<script src="test.js"></script>`)
 win.document.write(`</body>`)
 win.document.write(`</html>`)
-
-  //REDIRECT
-  // var anchor = document.createElement("a")
-  // anchor.setAttribute("href", "/pdf.html")
-  // anchor.setAttribute("targer","_blank")
-  // anchor.click()
-  // anchor.remove()
 
 })
