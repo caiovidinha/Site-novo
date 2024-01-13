@@ -54,6 +54,7 @@ btnVer.addEventListener('click', async () => {
         }
     }
     const modalCupom = document.querySelector('.modalCupom')
+    cupomInfo.classList.add("hidden")
     modalCupom.showModal()
 
 })
