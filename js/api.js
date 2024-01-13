@@ -2,6 +2,7 @@ const getClientes = async () => {
     const url = 'http://localhost:3000/consulta'
     const res = await fetch(url)
     const clientList = await res.json()
+    if(!clientList.lista) console.log(clientList)
     return clientList.lista
 }
 
@@ -20,8 +21,8 @@ const getPessoa = async (login,cpf) => {
         body: JSON.stringify(bodyJSON)
     })
     const response = await res.text()
+    if(JSON.parse(response).error == 'cpf') return 'Erro de CPF'
     if(JSON.parse(response).error == 'login') return 'Erro de Login'
-    else if(JSON.parse(response).error == 'cpf') return 'Erro de CPF'
     return JSON.parse(response)
 
 }
