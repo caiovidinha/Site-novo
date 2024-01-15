@@ -41,11 +41,21 @@ setInterval(()=>{
       serviceTitle.innerText = "Outsourcing de Equipamentos"
       serviceDesc.innerText = "Solução sem investimento inicial. Não deseja investir em equipamentos de rede? Nossa área comercial oferece a opção de colocação dos equipamentos por uma taxa mensal, além do suporte necessário para garantir o funcionamento contínuo do seu ambiente de trabalho."
       fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ6.png);"
-      buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20realizar%20Outsourcing%20de%20Equipamento%20com%20a%20Green%20Fiber!"
+      buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20realizar%20Outsourcing%20de%20Equipamento%20com%20a%20Green%20Fiber!"
   }else if(activeCarousel.classList.contains('item7')){
     serviceTitle.innerText = "Monitoramento e Diagnóstico"
     serviceDesc.innerText = "Prevenção é a chave para o seu negócio. Monitoramos ativamente seus equipamentos, desde computadores e impressoras até telefonia, proporcionando previsibilidade ao identificar e notificar sobre falhas iminentes. Isso otimiza o tempo de resposta da sua equipe, tornando-a mais proativa e eficiente."
     fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ7.png);"
-    buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20contratar%20o%20Monitoramento%20e%20diagn%C3%B3stico%20dos%20meus%20equipamentos%20com%20a%20Green%20Fiber!"
+    buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Monitoramento%20e%20diagn%C3%B3stico%20dos%20meus%20equipamentos%20com%20a%20Green%20Fiber!"
+  }else if(activeCarousel.classList.contains('item8')){
+    serviceTitle.innerText = "Green Fiber Max"
+    serviceDesc.innerText = "Conectividade sem limites. Desenvolvemos projetos personalizados para maximizar a cobertura do seu Wi-Fi, garantindo que todos os cantos da sua casa tenham acesso à internet de alta velocidade. Elimine pontos cegos e desfrute de uma conexão estável em cada ambiente, proporcionando uma experiência online perfeita para toda a sua família."
+    fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ8.png);"
+    buttonServ.href = "/planosMax.html"
+  }else if(activeCarousel.classList.contains('item9')){
+    serviceTitle.innerText = "Câmeras de Segurança"
+    serviceDesc.innerText = "Proteção além da conexão. Oferecemos serviços profissionais de instalação de câmeras de segurança para fortalecer a segurança do seu espaço. Embora não realizemos o monitoramento de imagens, garantimos a configuração eficiente do sistema, proporcionando tranquilidade e controle sobre a segurança do seu ambiente residencial ou comercial."
+    fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ9.png);"
+    buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20orçar%20o%20Projeto%20de%20Câmeras%20de%20Segurança%20com%20a%20Green%20Fiber!"
   }
 },200)
