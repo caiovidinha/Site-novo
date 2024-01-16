@@ -161,7 +161,7 @@ btnResg.addEventListener('click',async () => {
           
         }
         
-        fetch('https://hooks.zapier.com/hooks/catch/17556644/3wvxqor/', {
+        fetch('https://hooks.zapier.com/hooks/catch/11052334/3g4w302/', {
           method: 'POST',
           mode: 'no-cors',
           headers: {
