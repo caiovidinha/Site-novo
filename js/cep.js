@@ -41,8 +41,8 @@ submit.addEventListener('click', async (e)=>{
   const modalNOT = document.querySelector('.modalNOT')
   e.preventDefault()
   if(cep.length === 8 && numero.length !== 0) {
-    const clientList = await getClientes()
-    if(checkCEP(clientList,cep,numero)) {
+    const cepExiste = await getCEP(cep,numero)
+    if(cepExiste == 'true') {
       modalOK.showModal()
     }else{
       modalNOT.showModal()
