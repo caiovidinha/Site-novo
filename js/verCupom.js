@@ -73,7 +73,7 @@ useBtn.addEventListener('click', () => {
         codigo: codigo.value
       }
       
-      fetch('https://hooks.zapier.com/hooks/catch/17556644/3gy2wer/', {
+      fetch('https://hooks.zapier.com/hooks/catch/11052334/3g4grxu/', {
         method: 'POST',
         mode: 'no-cors',
         headers: {

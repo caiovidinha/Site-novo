@@ -126,7 +126,7 @@ btnResg.addEventListener('click',async () => {
   
     case 'CT Nação de Lutas (10% OFF)':
     img = 'img/logos_clube/nacao.png'
-    descricao = 'Válido para Jiu-jitsu segunda quarta e sexta, MMA De segunda a sexta e o Box. Aplicado na mensalidade.'
+    descricao = 'Válido para Jiu-jitsu segunda quarta e sexta, MMA De segunda a sexta e o Boxe. Aplicado na mensalidade.'
     desconto = '10% OFF'
     break
   
@@ -161,7 +161,7 @@ btnResg.addEventListener('click',async () => {
           
         }
         
-        fetch('https://hooks.zapier.com/hooks/catch/17556644/3wvxqor/', {
+        fetch('https://hooks.zapier.com/hooks/catch/11052334/3g4w302/', {
           method: 'POST',
           mode: 'no-cors',
           headers: {
