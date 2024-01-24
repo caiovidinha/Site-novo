@@ -56,14 +56,3 @@ submit.addEventListener('click', async (e)=>{
       }
     }
 })
-
-
-const getPessoa = async (login,cpf) => {
-    const url = `${urlAPI}/login/${login}/${cpf}`
-    const res = await fetch(url)
-    const response = await res.text()
-    if(JSON.parse(response).error == 'cpf') return 'Erro de CPF'
-    if(JSON.parse(response).error == 'login') return 'Erro de Login'
-    return JSON.parse(response)
-
-}

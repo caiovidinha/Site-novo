@@ -48,6 +48,17 @@ btnCloseCPF.addEventListener('click', () => {
     modalCPF.close()
 })
 
+const getPessoa = async (login,cpf) => {
+  const url = `https://www.greenfiber.net.br/api/login/${login}/${cpf}`
+  const res = await fetch(url)
+  const response = await res.text()
+  if(JSON.parse(response).error == 'cpf') return 'Erro de CPF'
+  if(JSON.parse(response).error == 'login') return 'Erro de Login'
+  return JSON.parse(response)
+
+}
+
+
 btnResg.addEventListener('click',async () => {
     const login = document.querySelector('.login').value
     const btnText = selectMenu.querySelector('.btn-text').innerText
