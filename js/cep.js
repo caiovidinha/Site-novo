@@ -20,7 +20,6 @@ id('cep').onkeyup = function(){
 }
 
 
-const submit = document.querySelector('.consulta')
 const numeroCampo = document.querySelector('#numero')
 
 numeroCampo.addEventListener('focus',()=>{
@@ -30,35 +29,6 @@ numeroCampo.addEventListener('focus',()=>{
   errorNum.classList.add('hidden')
 })
 
-submit.addEventListener('click', async (e)=>{
-  const cepCampo = document.querySelector('#cep')
-  const cep = cepCampo.value
-  const numeroCampo = document.querySelector('#numero')
-  const numero = numeroCampo.value
-  const errorNum = document.querySelector('#errorNum')
-  const errorCEP = document.querySelector('#errorCEP')
-  const modalOK = document.querySelector('.modalOK')
-  const modalNOT = document.querySelector('.modalNOT')
-  e.preventDefault()
-  if(cep.length === 8 && numero.length !== 0) {
-    const cepExiste = await getCEP(cep,numero)
-    if(cepExiste == 'true') {
-      modalOK.showModal()
-    }else{
-      modalNOT.showModal()
-    }
-  }
-  else {
-    if (numero.length == 0) {
-        numeroCampo.classList.add('border-red-700')
-        errorNum.classList.remove('hidden')
-      }
-    if (cep.length < 8) {
-        cepCampo.classList.add('border-red-700')
-        errorCEP.classList.remove('hidden')
-      }
-    }
-})
 
 const modalOK = document.querySelector('.modalOK')
 const modalNOT = document.querySelector('.modalNOT')
