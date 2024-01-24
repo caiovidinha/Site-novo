@@ -4,8 +4,7 @@ const getCEP = async (cep,num) => {
     const url = `${urlAPI}/consulta/${cep}/${num}`
     const res = await fetch(url)
     const clientList = await res.json()
-    if(clientList) return clientList.existe
-    else return 'false'
+    return clientList.existe
 }
 
 const getPessoa = async (login,cpf) => {
