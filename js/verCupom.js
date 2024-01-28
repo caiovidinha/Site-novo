@@ -67,7 +67,6 @@ closeCupom.addEventListener('click', () => {
 const useBtn = document.querySelector('#btnUse')
 useBtn.addEventListener('click', () => {
     const cupomInfo = document.querySelector(".cupomInfo")
-    cupomInfo.classList.add("hidden")
     const codigo = document.querySelector(".codigo")
     const post = {
         codigo: codigo.value
@@ -81,5 +80,6 @@ useBtn.addEventListener('click', () => {
         },
         body: JSON.stringify(post),
       })
+      cupomInfo.classList.add("hidden")
       codigo.value = ''
 })

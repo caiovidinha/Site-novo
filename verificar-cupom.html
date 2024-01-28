@@ -59,7 +59,7 @@
     <hr 
     class="w-16 my-2 border-[1px] rounded-lg border-gray-600 border-solid mx-auto"
     ></h2>
-    <div class="w-[92%] md:w-[30%] mx-auto p-10 bg-gray-200 rounded-xl my-10 transition-all duration-300">
+    <div class="w-[92%] md:w-[30%] mx-auto p-6 bg-gray-200 rounded-xl my-10 transition-all duration-300">
         <div class="mb-3">
             <label for="codigo" class="block mb-1">Inserir código:</label>
             <input type="text" id="codigo" name="codigo" class="codigo w-full p-2 border border-gray-300 rounded-lg focus:border-green-500">
@@ -67,15 +67,15 @@
         
         <button id="btnVer" class="bg-green-500 hover:bg-green-700 p-3 my-3 rounded-lg text-white w-full">VERIFICAR</button>
         <div class="transition-all duration-300 cupomInfo bg-gray-300 p-2 rounded-lg flex flex-col items-center hidden">
-            <div class="bg-gray-200 flex p-3 justify-between my-2 rounded-lg w-[60%]"><strong class="text-lg">Cupom:</strong><p class="codigoInfo text-lg">codigo</p></div>
+            <div class="bg-gray-200 flex p-3 justify-between my-2 rounded-lg w-[100%] md:w-[60%]"><strong class="text-lg">Cupom:</strong><p class="codigoInfo text-lg">codigo</p></div>
             <ul class="w-full">
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Status:</strong><p class="status">status</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Nome:</strong><p class="nome">nome</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>CPF:</strong><p class="cpf">cpf</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Parceiro:</strong><p class="parceiros">parceiro</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Desconto:</strong><p class="desconto">desconto</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Data de Criação:</strong><p class="criacao">criação</p></li>
-                <li class="bg-gray-100 flex p-3 justify-between my-2 rounded-lg"><strong>Data de Validade:</strong><p class="validade">validade</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Status:</strong><p class="status text-sm">status</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Nome:</strong><p class="nome text-sm">nome</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>CPF:</strong><p class="cpf text-sm">cpf</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Parceiro:</strong><p class="parceiros text-sm">parceiro</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Desconto:</strong><p class="desconto text-sm">desconto</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Data de Criação:</strong><p class="criacao text-sm">criação</p></li>
+                <li class="bg-gray-100 flex p-3 items-center justify-between my-2 rounded-lg"><strong>Data de Validade:</strong><p class="validade text-sm">validade</p></li>
             </ul>
             <button id="btnUse" class="bg-red-500 hover:bg-red-700 p-3 my-3 rounded-lg text-white w-full">UTILIZAR CUPOM</button>
         </div>
