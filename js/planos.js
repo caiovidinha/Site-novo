@@ -28,6 +28,11 @@ options500.forEach(option => {
                 assinar500.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
                 break
 
+            case 'GreenFiber TV Light + HBOMax (+R$44,90)':
+                price500.innerText = `R$ ${(+99.99 + +44.90).toFixed(2).toString().replace('.',',')}`
+                assinar500.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
+                break
+
             case 'GreenFiber TV Plus + HBOMax (+R$50,90)':
                 price500.innerText = `R$ ${(+99.99 + +50.90).toFixed(2).toString().replace('.',',')}`
                 assinar500.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
@@ -76,8 +81,13 @@ options600.forEach(option => {
                 assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
                 break
 
-            case 'GreenFiber TV Plus + HBOMax (+R$46,00)':
-                price600.innerText = `R$ ${(+124.99 + +46).toFixed(2).toString().replace('.',',')}`
+            case 'GreenFiber TV Light + HBOMax (+R$39,90)':
+                price600.innerText = `R$ ${(+124.99 + +39.90).toFixed(2).toString().replace('.',',')}`
+                assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
+                break
+
+            case 'GreenFiber TV Plus + HBOMax (+R$44,90)':
+                price600.innerText = `R$ ${(+124.99 + +44.90).toFixed(2).toString().replace('.',',')}`
                 assinar600.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20600%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
                 break
 
@@ -124,8 +134,13 @@ options800.forEach(option => {
                 assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus!"
                 break
 
-            case 'GreenFiber TV Plus + HBOMax (+R$46,00)':
-                price800.innerText = `R$ ${(+149.99 + +46).toFixed(2).toString().replace('.',',')}`
+            case 'GreenFiber TV Plus + HBOMax (+R$39,90)':
+                price800.innerText = `R$ ${(+149.99 + +39.90).toFixed(2).toString().replace('.',',')}`
+                assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
+                break
+
+            case 'GreenFiber TV Plus + HBOMax (+R$44,90)':
+                price800.innerText = `R$ ${(+149.99 + +44.90).toFixed(2).toString().replace('.',',')}`
                 assinar800.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20800%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!"
                 break
 
