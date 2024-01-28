@@ -116,6 +116,12 @@ btnResg.addEventListener('click',async () => {
     descricao = 'Válido para todos os produtos, exceto os que estão em promoção.'
     desconto = '5% OFF'
     break
+
+    case `Óticas D'fonseca (15% OFF)`:
+    img = 'img/logos_clube/dfonseca.png'
+    descricao = 'Válido somente para as unidades na Rua Ator Paulo Gustavo e na Rua Desembargador Lima Castro.'
+    desconto = '15% OFF'
+    break
   
     case 'BF Tosa e Banho (10% OFF)':
     img = 'img/logos_clube/bf.png'
