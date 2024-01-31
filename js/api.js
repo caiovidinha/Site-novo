@@ -37,7 +37,8 @@ const fetchURL = async(cep,num) => {
     }
 }
 const submit = document.querySelector('.consulta')
-submit.addEventListener('click', async (e)=>{
+
+if(submit){submit.addEventListener('click', async (e)=>{
     const cepCampo = document.querySelector('#cep')
     const cep = cepCampo.value
     const numeroCampo = document.querySelector('#numero')
@@ -59,3 +60,4 @@ submit.addEventListener('click', async (e)=>{
       }
     }
 })
+}

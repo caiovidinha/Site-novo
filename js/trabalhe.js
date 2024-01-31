@@ -28,7 +28,7 @@ btn.addEventListener('click', async () =>  {
         })
         form.innerHTML = "<h1 class='flex items-center gap-3'><img src='img/check.png' class='w-5 h-5'>Indicação Enviada!</h1>"
     }else {
-        form.innerHTML = "<div class='flex flex-col justify-center items-center'><h1 class='flex items-center gap-3'><img src='img/notcheck.png' class='w-5 h-5'>Preencha todos os campos!</h1><a href='/indique.html' class='text-center bg-red-500 hover:bg-red-700 p-3 rounded-lg text-white w-full mt-3'>Tentar novamente</a></div>"
+        form.innerHTML = "<div class='flex flex-col justify-center items-center'><h1 class='flex items-center gap-3'><img src='img/notcheck.png' class='w-5 h-5'>Preencha todos os campos!</h1><a href='/indique' class='text-center bg-red-500 hover:bg-red-700 p-3 rounded-lg text-white w-full mt-3'>Tentar novamente</a></div>"
     }
 })
 

@@ -51,11 +51,12 @@ setInterval(()=>{
     serviceTitle.innerText = "Green Fiber Max"
     serviceDesc.innerText = "Conectividade sem limites. Desenvolvemos projetos personalizados para maximizar a cobertura do seu Wi-Fi, garantindo que todos os cantos da sua casa tenham acesso à internet de alta velocidade. Elimine pontos cegos e desfrute de uma conexão estável em cada ambiente, proporcionando uma experiência online perfeita para toda a sua família."
     fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ8.png);"
-    buttonServ.href = "/planosMax.html"
+    buttonServ.href = "/planosMax"
   }else if(activeCarousel.classList.contains('item1')){
     serviceTitle.innerText = "Câmeras de Segurança"
-    serviceDesc.innerText = "Proteção além da conexão. Oferecemos serviços profissionais de instalação de câmeras de segurança para fortalecer a segurança do seu espaço. Embora não realizemos o monitoramento de imagens, garantimos a configuração eficiente do sistema, proporcionando tranquilidade e controle sobre a segurança do seu ambiente residencial ou comercial."
+    serviceDesc.innerText = "Proteção além da conexão. Oferecemos serviços profissionais de instalação de câmeras de segurança para fortalecer a segurança do seu espaço. Embora não realizemos o monitoramento de imagens, garantimos a configuração eficiente do sistema, proporcionando tranquilidade e controle sobre a segurança do seu ambiente residencial ou comercial.Realizamos projeto de acordo com a sua necessidade e com foco no maior nível de segurança."
     fundoServ.style.cssText = "background-image: url(/img/bannerFundoServ9.png);"
     buttonServ.href = "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20orçar%20o%20Projeto%20de%20Câmeras%20de%20Segurança%20com%20a%20Green%20Fiber!"
+    buttonServ.innerText = "Solicite um orçamento" 
   }
 },200)
