@@ -8,15 +8,8 @@ const getCEP = async (cep,num) => {
     const url = `${urlAPI}/consulta/${cep}/${num}`
     const btnText = document.querySelector('.consulta')
     if(btnText) btnText.innerText = 'Consultando...'
-    Promise.race([fetch(url), timeout(2000)])
-    .then(res => {
-        fetchURL(cep,num)
-    })
-    .catch(err => {
-        const modalNOT = document.querySelector('.modalNOT')
-        modalNOT.showModal()
-  });
-  if(btnText) btnText.innerText = 'Consultar'
+    const a = await fetchURL(cep,num)
+    if(btnText) btnText.innerText = 'Consultar'
 }
 
 const check = async(cep,num) => {
@@ -29,7 +22,6 @@ const fetchURL = async(cep,num) => {
     const url = `${urlAPI}/consulta/${cep}/${num}`
     const a = await fetch(url)
     const clientList = await a.json()
-    console.log(clientList)
     if (clientList.existe == 'true') {
         modalOK.showModal()
     }else if(clientList.existe == 'false'){
