@@ -125,7 +125,7 @@ btnResg.addEventListener('click',async () => {
   
     case 'BF Tosa e Banho (10% OFF)':
     img = 'img/logos_clube/bf.png'
-    descricao = 'Válido para rações e remédios de segunda a sábado. Para Tosa higienica e hidratação somente terças e quartas.'
+    descricao = 'Válido para rações e remédios de terça a sábado. Para Tosa higienica e hidratação somente terças e quartas.'
     desconto = '10% OFF'
     break
   
