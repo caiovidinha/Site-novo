@@ -10,6 +10,9 @@ const closePet = document.querySelector('#closePet')
 const modalModa = document.querySelector('.modalModa')
 const btnModa = document.querySelector('.btnModa')
 const closeModa = document.querySelector('#closeModa')
+const modalSec = document.querySelector('.modalSec')
+const btnSec = document.querySelector('.btnSec')
+const closeSec = document.querySelector('#closeSec')
 
 btnFood.addEventListener('click', () => {
     modalFood.showModal()
@@ -37,4 +40,18 @@ btnModa.addEventListener('click', () => {
 })
 closeModa.addEventListener('click', () => {
     modalModa.close()
+})
+
+btnModa.addEventListener('click', () => {
+    modalModa.showModal()
+})
+closeModa.addEventListener('click', () => {
+    modalModa.close()
+})
+
+btnSec.addEventListener('click', () => {
+    modalSec.showModal()
+})
+closeSec.addEventListener('click', () => {
+    modalSec.close()
 })

@@ -117,6 +117,12 @@ btnResg.addEventListener('click',async () => {
     desconto = '5% OFF'
     break
 
+    case 'Verisure - Consultor Samuel (60% OFF)':
+    img = 'img/logos_clube/verisure.png'
+    descricao = 'Válido para todos os serviços.'
+    desconto = '60% OFF'
+    break
+
     case `Óticas D'fonseca (15% OFF)`:
     img = 'img/logos_clube/dfonseca.png'
     descricao = 'Válido somente para as unidades na Rua Ator Paulo Gustavo e na Rua Desembargador Lima Castro.'
