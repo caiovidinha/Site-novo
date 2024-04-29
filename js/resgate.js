@@ -165,9 +165,15 @@ btnResg.addEventListener('click',async () => {
     desconto = '10% OFF'
     break
   
-    case 'Salgados Vó Regina (10% OFF)':
-    img = 'img/logos_clube/regina.png'
-    descricao = 'Válido para todos os pedidos.'
+    case 'Lissa Concept (20% OFF)':
+    img = 'img/logos_clube/lissa.png'
+    descricao = 'Hidratação + finalização + cutilagem e esmaltação da mão. De terça a quinta.'
+    desconto = '20% OFF'
+    break
+
+    case "Graça's Espaço de Beleza (10% OFF)":
+    img = 'img/logos_clube/gracas.png'
+    descricao = 'Válido somente para serviços de cabeleireira. De terça a sábado.'
     desconto = '10% OFF'
     break
   
