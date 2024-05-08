@@ -176,6 +176,12 @@ btnResg.addEventListener('click',async () => {
     descricao = 'Válido somente para serviços de cabeleireira. De terça a sábado.'
     desconto = '10% OFF'
     break
+
+    case "Le Petit Gourmet (5% OFF)":
+    img = 'img/logos_clube/petit.png'
+    descricao = 'Válido para todos os pedidos. De segunda a sábado.'
+    desconto = '5% OFF'
+    break
   
     }
         
