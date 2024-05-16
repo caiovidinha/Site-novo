@@ -182,6 +182,18 @@ btnResg.addEventListener('click',async () => {
     descricao = 'Válido para todos os pedidos. De segunda a sábado.'
     desconto = '5% OFF'
     break
+
+    case "Padaria Barcelos (10% OFF)":
+    img = 'img/logos_clube/barcelos.png'
+    descricao = 'Válido para todos os itens da casa.'
+    desconto = '10% OFF'
+    break
+
+    case "Veterinária Vila Progresso (R$ 50,00)":
+    img = 'img/logos_clube/vetvila.png'
+    descricao = 'Consultas a R$50,00 todas as Quartas.'
+    desconto = 'R$ 50,00'
+    break
   
     }
         
