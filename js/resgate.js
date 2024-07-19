@@ -194,6 +194,12 @@ btnResg.addEventListener('click',async () => {
     descricao = 'Consultas a R$50,00 todas as Quartas.'
     desconto = 'R$ 50,00'
     break
+
+    case "ProConcept (10% OFF)":
+    img = 'img/logos_clube/proconcept.png'
+    descricao = 'Planos PERSONAL e VIP - Desconto no primeiro mês e isenção da matrícula!'
+    desconto = '10% OFF'
+    break
   
     }
         
