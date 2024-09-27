@@ -17,7 +17,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ1.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20a%20Green%20Fiber%20TV!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20a%20Green%20Fiber%20TV!";
     } else if (activeCarousel.classList.contains("item3")) {
         serviceTitle.innerText = "Hospedagem de Sites";
         serviceDesc.innerText =
@@ -25,7 +25,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ2.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20a%20Hospedages%20de%20Sites%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20a%20Hospedages%20de%20Sites%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item4")) {
         serviceTitle.innerText = "Registro de Domínios";
         serviceDesc.innerText =
@@ -33,7 +33,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ3.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Registro%20de%20Dom%C3%ADnio%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Registro%20de%20Dom%C3%ADnio%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item5")) {
         serviceTitle.innerText = "Cobertura Wireless (Site Survey)";
         serviceDesc.innerText =
@@ -41,7 +41,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ4.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Projeto%20de%20Cobertura%20Wireless%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Projeto%20de%20Cobertura%20Wireless%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item6")) {
         serviceTitle.innerText = "Cabeamento Estruturado";
         serviceDesc.innerText =
@@ -49,7 +49,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ5.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Projeto%20de%20Cabeamento%20Estruturado%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Projeto%20de%20Cabeamento%20Estruturado%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item7")) {
         serviceTitle.innerText = "Outsourcing de Equipamentos";
         serviceDesc.innerText =
@@ -57,7 +57,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ6.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20realizar%20Outsourcing%20de%20Equipamento%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20realizar%20Outsourcing%20de%20Equipamento%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item8")) {
         serviceTitle.innerText = "Monitoramento e Diagnóstico";
         serviceDesc.innerText =
@@ -65,7 +65,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ7.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Monitoramento%20e%20diagn%C3%B3stico%20dos%20meus%20equipamentos%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Monitoramento%20e%20diagn%C3%B3stico%20dos%20meus%20equipamentos%20com%20a%20Green%20Fiber!";
     } else if (activeCarousel.classList.contains("item9")) {
         serviceTitle.innerText = "Green Fiber Max";
         serviceDesc.innerText =
@@ -80,7 +80,7 @@ setInterval(() => {
         fundoServ.style.cssText =
             "background-image: url(/img/bannerFundoServ9.png);";
         buttonServ.href =
-            "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20orçar%20o%20Projeto%20de%20Câmeras%20de%20Segurança%20com%20a%20Green%20Fiber!";
+            "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20orçar%20o%20Projeto%20de%20Câmeras%20de%20Segurança%20com%20a%20Green%20Fiber!";
         buttonServ.innerText = "Solicite um orçamento";
     }
 }, 200);

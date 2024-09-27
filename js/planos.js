@@ -24,7 +24,7 @@ options500.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar500.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             case "GreenFiber TV Plus + HBOMax (+R$46,99)":
@@ -33,13 +33,13 @@ options500.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar500.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             default:
                 price500.innerText = `R$ 99,90`;
                 assinar500.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20500%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20500%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
                 break;
         }
         optionMenu500.classList.add("hidden");
@@ -73,7 +73,7 @@ options600.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar600.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             case "GreenFiber TV Plus + HBOMax (+R$40,00)":
@@ -82,13 +82,13 @@ options600.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar600.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             default:
                 price600.innerText = `R$ 124,99`;
                 assinar600.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20600%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20600%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
                 break;
         }
         optionMenu600.classList.add("hidden");
@@ -122,7 +122,7 @@ options800.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar800.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             case "GreenFiber TV Plus + HBOMax (+R$40,00)":
@@ -131,13 +131,13 @@ options800.forEach((option) => {
                     .toString()
                     .replace(".", ",")}`;
                 assinar800.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Combo%20500%20MEGA%20%2B%20%20%20GreenFiber%20TV%20Plus%20%20%2B%20HBO%20Max!";
                 break;
 
             default:
                 price800.innerText = `R$ 149,99`;
                 assinar800.href =
-                    "https://api.whatsapp.com/send/?phone=5521996938757&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20800%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
+                    "https://api.whatsapp.com/send/?phone=5521998629274&text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20plano%20de%20800%20MEGA%20de%20internet%20com%20a%20Green%20Fiber!";
                 break;
         }
         optionMenu800.classList.add("hidden");
